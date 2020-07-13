@@ -1,0 +1,200 @@
+.news-modules{
+  width:100%;
+  height: 22.5rem;
+  background: url('新闻中心.jpg') no-repeat;
+  background-position: center;
+}
+.science-modules{
+  width:100%;
+  height: 22.5rem;
+  background: url('科学传播.jpg') no-repeat;
+  background-position: center;
+}
+
+
+.news-detail{
+  width: 75rem;
+  margin: auto;
+  height: auto;
+  margin: 2rem 0;
+
+
+  .news-tag{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    border-bottom: 1px solid #d0d0d0;
+    .news-des{
+      display:flex;
+      align-items: center;
+      color: #1a499e;
+      font-size: 1.125rem;
+    }
+    .news-return{
+      color: #787878;
+      font-size: 1.125rem;
+      a{
+        text-decoration: none; 
+        color: #787878;
+      }
+      a:hover{
+        color: #1a499e;
+        background: #fff;
+      }
+    }
+  }
+
+  /*内容部分*/
+  .news-detail-contain{
+    padding-top: 1rem;
+
+    .detail-title{
+      font-size: 1.5rem;
+      line-height: 2rem;
+      text-align: center;
+      font-weight: normal;
+      color: #333333;
+      padding: 1rem 0;
+    }
+    .detail-brand{
+       width: 100%;
+       background: rgb(230,240,255);
+       display: flex; 
+       justify-content: center;
+       padding: 0.5rem 0;
+       font-size: 0.875rem;
+       div{
+        margin-right: 1rem;
+        color: #999;
+       }
+    }
+  }
+
+  .detail-content{
+    padding: 1% 10%;
+    font-family: '微软雅黑' !important;
+    font-weight: normal !important;
+    color: #686868 !important;
+    line-height: 1.875rem !important;      
+    font-size: 1rem !important;
+    
+    font-weight: normal !important;
+    *{
+      font-family: '微软雅黑' !important;
+      font-weight: normal !important;
+      color: #686868 !important;
+      line-height: 1.875rem !important;      
+      font-size: 1rem !important;    
+    }
+    img{
+      width: 648px;
+      text-align:center;
+    }
+  }
+
+
+  /*分享轉載*/
+  .detail-share{
+    margin-top: 80px;
+    height: 5rem;
+    .SG_txtb{
+      display:flex;
+      height: 100%;
+
+      .share-pannel{
+        margin-left: 10px;
+        a{
+          padding: 0 8px 5px 15px;
+        }
+        .bshare-qzone{
+          background: url('qq_nor.png') no-repeat;
+        }
+        .bshare-sinaminiblog{
+          background: url('weibo_nor.png') no-repeat;
+        }
+        .bshare-douban{
+          background: url('douban_nor.png') no-repeat;
+        }
+        .bshare-qq{
+          background: url('qqt_nor.png') no-repeat;
+        }
+
+        .bshare-weixin{
+          background: url('wx_nor.png') no-repeat;
+          position: relative;
+          
+          .weixin-pannel{
+            visibility: hidden;
+            width: 190px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -95px;
+            display:flex;
+            #qcode_txt{
+              width: 28%;
+              margin-left: 2%;
+            }
+            .txt{
+              width: 70%;
+              display:flex;
+              flex-direction:column;
+              align-items:center;
+              p{margin-bottom: 0;font-size:0.88rem;}
+            }
+
+          }
+          .weixin-pannel::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+          }
+        }
+
+        .bshare-weixin:hover .weixin-pannel {
+          visibility: visible;
+        }
+
+      }
+    }
+
+  }
+
+
+
+
+  /*上一条下一条新闻*/
+  .detail-more{
+    background: #fff;
+    margin-top: 0.13rem;
+    padding: 1rem 0;
+    .detail-href{
+      width: 100%;
+      font-size: 0.88rem;
+    }
+    div{
+      padding-top: 1rem;
+    }
+    .text-right:hover{
+      color:#1b914e;
+      
+    }
+    .text-left:hover{
+      color:#1b914e;
+    }
+  }
+
+}

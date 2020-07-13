@@ -1,0 +1,72 @@
+.paginated_collection_contents {
+  clear: both;
+}
+
+.pagination {
+  
+  a {
+    background-color: #fff;
+    border-radius: 4px;
+    color: #000;
+    font-size: 1rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-right: 0.5rem;
+    padding: 0.8rem 1em;
+    text-decoration: none;
+    border: 1px solid #e5e5e5;
+  }
+
+  span.page.current {
+    background-color: #1a499e;
+    border-radius: 4px;
+    color: #fff !important;
+    font-size: 1rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-right: 0.5rem;
+    padding: 0.8rem 1em;
+    text-decoration: none;
+  }
+
+  span.page.current {
+    background-color: #1a499e;
+    border-radius: 4px;
+    color: #fff !important;
+    font-size: 1rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-right: 0.5rem;
+    padding: 0.8rem 1em;
+    text-decoration: none;
+  }
+}
+
+.pagination_information {
+  float: right;
+  margin-bottom: 5px;
+  color: #b3bcc1;
+  b { color: #5c6469; }
+}
+
+.download_links {
+  float: left;
+}
+
+.pagination_per_page {
+  float: right;
+  margin-left: 4px;
+  select {
+    @include light-button;
+    @include rounded(0px);
+    padding: 1px 5px;
+  }
+}
+
+.comments {
+  .pagination {
+    float: left;
+    margin-bottom: 30px;
+  }
+  .pagination_information {
+    float: left;
+    color: #000;
+  }
+}

@@ -1,0 +1,59 @@
+<div class="science-modules-p">
+  
+</div>
+
+
+<div style="display:flex;justify-content: center;align-items: center;">
+  <div id="news_all_lists_p">
+    <div class="news-lists-nav">
+      <div class="news-tag">
+        <div class="news-des">
+          <div style="width:0.5rem;height:1.1rem;margin-top:-2px;border-left:3px solid #1a499e;"></div>
+          <div>科学传播</div>
+        </div>
+        <div class="news-return"><%= link_to "首页",index_p_path%> 
+        <i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.3rem;margin-left:0.4rem;"></i><i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.3rem;margin-right:0.3rem;"></i>
+          <%= link_to "科学传播", root_path(anchor: "science")%> </div>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <% @sciences.try(:each) do |science| %>
+        <div class="news-detail-contain">
+          <div class="news-detail-image"><%=raw science.pic%></div>
+
+          <div class="news-detail-ct">
+            <div class="detail-tag">
+              <div class="detail-title hand" title="<%= science.title %>">
+                <%= link_to news_detail_p_path(:no => science.no), target: "_blank" do%>
+                <%= science.title %>
+                <%end%>
+              </div>
+              
+            </div>
+            
+            <div class="detail-content">
+              <%=raw science.introduce%>
+            </div>
+            <div class="detail-check">
+              <div>
+                <%= link_to science_detail_p_path(:no => science.no), target: "_blank" do%>
+              查看详情&nbsp; 
+              <i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.2rem;"></i><i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.2rem;"></i>
+              <%end%>                
+              </div>
+              <div class="detail-time">
+                <%= science.postdate %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>        
+      </div>
+    </div>
+
+    <div style="text-align: center;margin: 25px 0 0 0;">
+      <%= paginate @sciences,:prev_label => '上一页', :next_label => '下一页'  %>
+    </div>
+
+  </div>
+</div>

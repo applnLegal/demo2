@@ -1,0 +1,207 @@
+<!-- /*logo*/ -->
+<div id="logo_p" style="width: 100%;">
+  <div style="z-index:2;width:50%;position:absolute;margin-top: 20px;">
+    <%=image_tag("logo_p.png", width: '100%')%>
+  </div>
+</div>
+
+<!-- /*banner部分*/ -->
+<div id="banner_div_p">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slide1"></div>
+        <div class="swiper-slide slide2"></div>
+        <div class="swiper-slide slide3"></div>
+        <div class="swiper-slide slide4"></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+  </div> 
+</div>
+
+<script type="text/javascript">
+  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal', // 垂直切换选项
+    autoplay: {delay: 3000,disableOnInteraction: false,waitForTransition: true,},
+    speed: 300,
+    loop: true,
+    mousewheel: false,
+    pagination: '.swiper-pagination',//分页容器的css选择器
+    paginationType : 'custom',//自定义-分页器样式类型（前提）
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })  
+</script>
+
+
+<!-- /*倒计时部分*/ -->
+<div class="outer_div">
+  <div id="counttime_div_p">
+    <div class="counttime"></div>
+  </div>
+</div>
+
+<!-- /*新闻中心部分*/ -->
+<div class="outer_div">
+  <div id="news_p"> 
+    <div class="common-grey-item-p">
+      <div class="common-grey-item-head">新闻中心</div>
+    </div>
+    <div>
+      <div class="news-pic"></div>
+      <div class="news-list">
+
+      <% @news.try(:each) do |news| %>
+        <div class="news-list-one">
+            <div style="display: flex;width:70%">
+              <div class="news-list-cycle"><%=image_tag("point") %></div>
+              <div class="news-list-title" style="width:70%"><%= link_to news_detail_p_path(:no => news.no), target: "_blank" do%><%= news.title %><% end %></div>
+            </div>
+            <div style="color:#787878;"><%= news.created_at.to_date%></div>
+        </div>
+      <% end %>
+      </div>
+
+      <div class="news-more">
+        <%= link_to("查看更多", news_lists_p_path)%>&nbsp; <i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.2rem;"></i><i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.2rem;"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- /*科学传播部分*/ -->
+<div class="outer_div">
+  <div id="science_p">
+    <div class="common-grey-item-p">
+      <div class="common-grey-item-head">科学传播</div>
+    </div>
+    <div class="science-content">
+      <% @sciences.try(:each) do |science| %>
+      <% if science.no == "1" %>
+      <div class="science-inspect">
+      <% elsif science.no == "2" %>
+      <div class="science-lecture">
+      <% elsif science.no == "3" %>
+      <div class="science-survey">
+      <% elsif science.no == "4" %>
+      <div class="science-confirm">
+      <% end %>
+      
+      <%= link_to science_detail_p_path(:no => science.no), target: "_blank" do%>
+        <div class="science-pic"><%=raw science.pic.to_s.force_encoding('UTF-8')%></div>
+        <div class="science-opc"></div>
+        <div class="science-title" title="<%=science.title%>"><%=science.title%></div>
+      <% end %>
+      </div>
+      <% end %>
+    </div>
+    <div class="science-more">
+      <%= link_to("查看更多", science_lists_p_path)%>&nbsp; <i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.2rem;"></i><i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.2rem;"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- /*成员组成部分*/ -->
+<div class="outer_div">
+  <div id="member_p">
+    <div class="common-grey-item-p">
+      <div class="common-grey-item-head">成员组成</div>
+    </div>
+    <div class="member-content">
+      <div class="member-leader"></div>
+      <div class="member-system"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- /*重大成果部分*/ -->
+<div class="outer_div">
+  <div id="result_p">
+    <div class="common-grey-item-p">
+      <div class="common-grey-item-head">重大成果</div>
+    </div>
+    <div class="result-content">
+      <div class="itself_report"></div>
+      <div class="paper_book"></div>
+      <div class="consulting_report"></div>
+      <div class="talent_training"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- /*五大体系部分*/ -->
+<div class="outer_div">
+  <div id="five_system_p">
+    <div class="five-system-title">五大体系</div>
+    <div class="five-system-content">
+      <div class="five-system-lists">
+      <% @fivesystems.try(:each) do |fs| %>
+        <% if fs.id == 1%>
+        <div data-id="<%=fs.id%>" class="hand"><%=fs.title%></div>
+        <% elsif fs.id == 3 %>
+        <div data-id="<%=fs.id%>" style="margin-top: 1rem;" class="five-system-choose hand"><%=fs.title%></div>
+        <% else %>
+        <div data-id="<%=fs.id%>" style="margin-top: 1rem;" class="hand"><%=fs.title%></div>
+        <% end %>
+      <% end %>
+      </div>
+      <div class="five-system-img"><%=image_tag("五大体系分割")%></div>
+
+      <% @fivesystems.try(:each) do |fs| %>
+      <div  
+      <% if fs.id == 3 %>
+      class="five-system-details" 
+      <% else %>
+      class="five-system-details fs-detail-hide"
+      <% end %>
+      data-id="<%=fs.id%>">
+      <% fs_contents = fs.content.split(',') %>
+      <% fs_contents.each_with_index do |fsc,index| %>
+        <% if index == 0%>
+        <div><%=fsc%></div>
+        <% else %>
+        <div><%=fsc%></div>
+        <% end %>
+      <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<!-- /*专栏部分*/ -->
+<div class="outer_div">
+  <div id="projects_p">
+    <div class="common-grey-item-p">
+      <div class="common-grey-item-head">专栏</div>
+    </div>
+    <div class="projects-all">
+      <div class="projects-content projects-content1">
+        <div class="projects-opc"></div>
+        <div class="projects-title" title="动物专题">动物专题</div>
+      </div>
+      <div class="projects-content projects-content2">
+        <div class="projects-opc"></div>
+        <div class="projects-title" title="植物专题">植物专题</div>
+      </div>
+      <div class="projects-content projects-content3">
+        <div class="projects-opc"></div>
+        <div class="projects-title" title="微生物专题">微生物专题</div>
+      </div>
+    </div>
+  </div>
+</div>

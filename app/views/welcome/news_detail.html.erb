@@ -1,0 +1,73 @@
+<div class="news-modules">
+  
+</div>
+
+<div class="outer_div">
+  <div class="news-detail">
+
+    <div class="news-tag">
+      <div class="news-des"><div style="width:0.5rem;height:1.1rem;margin-top:1px;border-left:3px solid #1a499e;"></div>
+          <div>动态详情</div>
+        </div>
+      <div class="news-return"><%= link_to "首页",index_path%> > <%= link_to "新闻中心", root_path(anchor: "nesws")%> > 动态详情</div>
+    </div>
+
+    <div class="news-detail-contain">
+      <div class="detail-title"><%= @news.title %></div>
+      <div class="detail-brand">
+        <div>发表时间：<%= @news.postdate %></div>
+        <div>来源：<%= @news.source %></div>
+        <div>作者：<%= @news.author %></div>
+      </div>
+    </div>
+
+    <div class="detail-content">
+      <%= raw @news.content %> 
+    </div>
+
+
+
+<div class="QQ-zong-share" style="width:10px;height:10px;background: blue;" title="分享到QQ空间" h_title="转载<%= @news.title %>@青藏科考-新闻中心&amp;" h_url="http://192.168.0.129/news_detail?no=<%= @news.no %>.html" h_desc="刚才不经意间，看到有关青藏科考的帖子，作为科考人，不禁又有一种激动。 阅读文章，我觉...  (来自 @青藏科考-新闻中心)"></div>
+
+    <div class="detail-share">
+      <div class="share SG_txtb clearfix">
+        <span class="share-title" >分享：</span> 
+        <div class="bshare-custom">
+          <div class="share-pannel clearfix">
+            <a class="bshare-sinaminiblog" target="__blank" title="分享到新浪微博" href="http://service.weibo.com/share/share.php?appkey=&amp;title=转载<%= @news.title %>@青藏科考-新闻中心&amp;url=http://192.168.0.129/news_detail?no=<%= @news.no %>.html&amp;pic="></a>
+            <a class="bshare-qzone" target="__blank" title="分享到QQ空间" h_title="转载<%= @news.title %>@青藏科考-新闻中心&amp;" h_url="http://192.168.0.129/news_detail?no=<%= @news.no %>.html" h_desc="刚才不经意间，看到有关青藏科考的帖子，作为科考人，不禁又有一种激动。 阅读文章，我觉...  (来自 @青藏科考-新闻中心)"></a>
+            <a class="bshare-douban" target="__blank" title="分享到豆瓣" href="https://www.douban.com/share/service?image=&amp;href=http://192.168.0.129/news_detail?no=<%= @news.no %>&amp;name=转载<%= @news.title %>@青藏科考-新闻中心&amp;text=刚才不经意间，看到有关青藏科考的帖子，作为科考人，不禁又有一种激动。 阅读文章，我觉...  (来自 @头条博客)"></a>
+            <a class="bshare-qq" target="__blank" title="分享到QQ好友" title="分享到QQ空间" h_title="转载<%= @news.title %>@青藏科考-新闻中心&amp;" h_url="http://192.168.0.129/news_detail?no=<%= @news.no %>.html" h_desc="刚才不经意间，看到有关青藏科考的帖子，作为科考人，不禁又有一种激动。 阅读文章，我觉...  (来自 @青藏科考-新闻中心)"></a>
+
+            <a class="bshare-weixin" title="分享到微信">
+              <div class="weixin-pannel" id="weixin-pannel">
+                <div id="qcode_txt" value="http://192.168.0.129/news_detail?no=<%= @news.no %>"></div>
+                <div class="txt"><p>打开微信“扫一扫”</p><p>打开网页后点击屏幕</p><p>右上角“分享”按钮</p></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="detail-more">
+      <div class="detail-href">
+        <% if @news_pre != nil %>
+          <%= link_to news_detail_path(:no => @news_pre.no) do%>
+            <div class="text-left"><span>上一条 :</span><%= @news_pre.title%></div>
+          <% end -%>
+        <% end -%>
+      </div>
+      <div class="detail-href">
+        <% if @news_next != nil %>
+          <%= link_to news_detail_path(:no =>  @news_next.no) do%>
+            <div class="text-right"><span>下一条 :</span><%= @news_next.title%></div>
+          <% end -%>
+        <% end -%>
+      </div>
+    </div>
+
+  </div>
+</div>

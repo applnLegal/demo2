@@ -1,0 +1,46 @@
+<div class="news-modules-p">
+  
+</div>
+
+<div class="outer_div_p">
+  <div class="news-detail-p">
+
+    <div class="news-tag">
+      <div class="news-des"><div style="width:0.5rem;height:1.1rem;margin-top:1px;border-left:3px solid #1a499e;"></div>
+          <div>动态详情</div>
+        </div>
+      <div class="news-return"><%= link_to "首页",index_p_path%> > <%= link_to "新闻中心", root_path(anchor: "nesws")%> > 动态详情</div>
+    </div>
+
+    <div class="news-detail-contain">
+      <div class="detail-title"><%= @news.title %></div>
+      <div class="detail-brand">
+        <div>发表时间：<%= @news.postdate %></div>
+        <div>来源：<%= @news.source %></div>
+        <div>作者：<%= @news.author %></div>
+      </div>
+    </div>
+
+    <div class="detail-content">
+      <%= raw @news.content %> 
+    </div>
+
+    <div class="detail-more">
+      <div class="detail-href">
+        <% if @news_pre != nil %>
+          <%= link_to news_detail_p_path(:no => @news_pre.no) do%>
+            <div class="text-left"><span>上一条 :</span><%= @news_pre.title%></div>
+          <% end -%>
+        <% end -%>
+      </div>
+      <div class="detail-href">
+        <% if @news_next != nil %>
+          <%= link_to news_detail_p_path(:no =>  @news_next.no) do%>
+            <div class="text-right"><span>下一条 :</span><%= @news_next.title%></div>
+          <% end -%>
+        <% end -%>
+      </div>
+    </div>
+
+  </div>
+</div>

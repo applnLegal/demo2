@@ -1,0 +1,539 @@
+body{
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.outer_div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*nav / 头部分*/
+#nav_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75rem;
+}
+.nav{
+  position: relative; 
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav-span{
+    font-size: 1.375rem;
+    display: flex;
+    div{
+      line-height: 4rem;
+      padding: 0 1.5rem;
+
+      a{
+        text-decoration: none; 
+        color: #333;
+      }
+      a:hover{
+        color: #1a499e;
+        background: #fff;
+      }
+    }
+    .nav-choose{
+      background: #1a499e;
+      a{
+        color: #fff !important;
+      }
+      a:hover{
+        background: #1a499e;
+      }
+    }
+  }
+  .nav-platform-div{
+    position: absolute;
+    top: 1rem; 
+    right: 0;
+    color: #333;
+    display:flex;
+    .nav-platform{
+      width: 20rem;
+      line-height: 2.125rem;
+      padding: 0 1rem;
+      display:flex;
+      justify-content: space-between;
+      border-radius: 4px 0px 0px 4px;
+      border: 1px solid #e5e5e5;
+      color: #1a499e;
+      .nav-platform-choose{
+        font-size: 1.125rem;
+        overflow: hidden; 
+        white-space:nowrap;
+      }
+    }
+    .nav-platform-jump{
+      padding: 0 0.6rem;
+      line-height: 2.125rem;
+      background-color: #1a499e;
+      border-radius: 0px 4px 4px 0px;
+    }
+  }
+  .nav-platform:hover{
+    
+  }
+
+  .nav-platform-option{
+    position:absolute;
+    right: 0;
+    top: 4rem;
+    z-index:3;
+    font-size: 1.125rem;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 8px 0px 
+      rgba(4, 0, 0, 0.1);
+    border-radius: 4px;
+    .nav-platform-name{
+      padding: 1rem;
+    }
+    .nav-platform-name:hover{
+      background: #f5f5f5;
+    }
+  }
+  
+}
+
+
+/*banner部分*/
+#banner_div {
+  width: 100%;
+  height: 28rem;
+  .swiper-container {
+    width: 100%;
+    height: 28rem;
+  }
+}
+
+.slide1{
+  background: url('banner1.jpg') no-repeat;
+  background-position: center;
+}
+.slide2{
+  background: url('banner2.jpg') no-repeat;
+  background-position: center;
+}
+.slide3{
+  background: url('banner3.jpg') no-repeat;
+  background-position: center;
+}
+.slide4{
+  background: url('banner4.jpg') no-repeat;
+  background-position: center;
+}
+
+/*倒计时部分*/
+#counttime_div{
+  width: 75rem;
+  height: 8rem;
+  background: url('科考项目启动时间.png');
+  background-position: center;
+  background-size: cover;
+  margin: 3rem 0 0 0;
+  color: #fff;
+}
+.counttime{
+  line-height: 8rem;
+  font-size: 1.5rem;
+  padding-left: 62%;
+}
+
+/*新闻中心*/
+#news{
+  margin: 3rem 0 0 0;
+  width: 75rem;
+  background: #fff;
+  li:hover{
+    color: #333;
+  }
+  a{
+    text-decoration: none; 
+    color: #686868;
+  }
+  a:hover{
+    //color: #1a499e; 
+    background: #f5f5f5;
+    border: none;
+  }
+
+  .news-head{
+    width: 7rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    color: #fff;
+    font-weight: 800;
+    background: #1a499e;
+  }
+  .news-pic{
+    width: 48%;
+    height: 23rem;
+    background: url("new_pic.png") no-repeat;
+    background-size: cover;
+    margin-right: 2%;
+  }
+  .news-list{
+    .news-list-one{
+      height: 2.9rem;
+      display: flex;
+      justify-content: space-between;
+      
+      padding: 0 1rem;
+      line-height: 2.9rem;
+      font-size: 1.125rem;
+      border-left: 2px solid #fff;
+
+      .news-list-cycle{
+        vertical-align: middle;
+        margin-right: 1rem;
+      }
+      .news-list-title{
+        overflow:hidden; 
+        text-overflow:ellipsis; 
+        white-space:nowrap;
+      }
+    }
+    .news-list-one:hover{
+       background: #f5f5f5;
+       //border-left: 2px solid #1a499e;
+    }
+  }
+    
+}
+
+
+
+/*科学传播、成员组成、重大成果及五大体系,共3部分*/
+#parts{
+  margin: 3rem 0 0 0;
+  width: 75rem;
+  background: #fff;
+  display:flex;
+  justify-content: space-between;
+
+  /*科学传播*/
+  #science{
+    margin-bottom: 3rem;
+    a{
+      text-decoration: none; 
+      color: #686868;
+    }
+    a:hover{
+      //color: #1a499e; 
+      background: #f5f5f5;
+      border: none;
+    }
+    .science-content{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      a{
+        background: none;
+        text-decoration: none; 
+        color: #fff;
+        font-size: 1.125rem;
+      }
+
+      .science-pic img{
+        width: 100%;
+        height: 13rem;
+      }
+
+
+      /*科学传播-考察*/
+      .science-inspect{
+        width: 49%;
+        height: 13rem;
+        margin: 0 1% 0 0;
+        position: relative;
+        .science-opc{
+          width: 100%;
+          height: 3rem;
+          background: rgba(0,0,0,0.25);
+          position: absolute;
+          bottom: 0;
+        }
+        .science-title{
+          width: 100%;
+          text-align: center;
+          color: #fff;
+          position: absolute;
+          bottom: 0.75rem;
+          overflow:hidden; //超出的文本隐藏
+          text-overflow:ellipsis; //溢出用省略号显示
+          white-space:nowrap; //溢出不换行 
+        }
+      }
+      /*科学传播-讲座*/
+      .science-lecture{
+        width: 49%;
+        height: 13rem;
+        margin: 0 0 0 0;
+        position: relative;
+        .science-opc{
+          width: 100%;
+          height: 3rem;
+          background-color: #000000;
+          opacity: 0.25;
+          position: absolute;
+          bottom: 0;
+        }
+        .science-title{
+          width: 100%;
+          text-align: center;
+          color: #fff;
+          position: absolute;
+          bottom: 0.75rem;
+          overflow:hidden; //超出的文本隐藏
+          text-overflow:ellipsis; //溢出用省略号显示
+          white-space:nowrap; //溢出不换行
+        }
+      }
+      /*科学传播-调研*/
+      .science-survey{
+        width: 49%;
+        height: 13rem;
+        margin: 2% 1% 0 0;
+        position: relative;
+        .science-opc{
+          width: 100%;
+          height: 3rem;
+          background: rgba(0,0,0,0);
+          position: absolute;
+          bottom: 0;
+        }
+        .science-title{
+          width: 100%;
+          text-align: center;
+          color: #fff;
+          position: absolute;
+          bottom: 0.75rem;
+          overflow:hidden; //超出的文本隐藏
+          text-overflow:ellipsis; //溢出用省略号显示
+          white-space:nowrap; //溢出不换行
+        }
+      }
+      /*科学传播-确认*/
+      .science-confirm{
+        width: 49%;
+        height: 13rem;
+        margin: 2% 0 0 0;
+        position: relative;
+        .science-opc{
+          width: 100%;
+          height: 3rem;
+          background: rgba(0,0,0,0.25);
+          position: absolute;
+          bottom: 0;
+        }
+        .science-title{
+          width: 100%;
+          text-align: center;
+          color: #fff;
+          position: absolute;
+          bottom: 0.75rem;
+          overflow:hidden; //超出的文本隐藏
+          text-overflow:ellipsis; //溢出用省略号显示
+          white-space:nowrap; //溢出不换行
+        }
+      }
+    }
+  }
+
+  #member{
+    .member-content{
+      display: flex;
+      justify-content: space-between;
+      height: 6rem;
+      .member-leader{
+        width: 49%;
+        background: url("领军人才.png");
+        background-position: center;
+        background-size: cover;
+      }
+      .member-system{
+        width: 49%;
+        background: url("支撑体系.png");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+
+  #result{
+    .result-content{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      div{
+        width: 48%;
+        height: 6rem;
+        background: #eee;
+      }
+      .itself_report{
+        background: url('科考报告.png');
+        background-position: center;
+        background-size: cover;
+        margin: 0 1% 0 0;
+      }
+      .paper_book{
+        background: url('论文专著.png');
+        background-position: center;
+        background-size: cover;
+        margin: 0 0 0 0;
+      }
+      .consulting_report{
+        background: url('咨询报告.png');
+        background-position: center;
+        background-size: cover;
+        margin: 1rem 1% 0 0;
+      }
+      .talent_training{
+        background: url('人才培养.png');
+        background-position: center;
+        background-size: cover;
+        margin: 1rem 0 0 0;
+      }
+    }
+
+    .five-system{
+      .five-system-title{
+        margin: 3rem 0 1.5rem 0;
+        font-size: 1.5rem;
+      }
+      .five-system-content{
+        width: 100%;
+        display: flex;
+
+        .five-system-lists{
+          width: 45%;
+          margin-right: 1rem;
+          div{
+            font-size: 1.25rem;
+            height: 3.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e5e5e5; 
+            color: #787878;           
+          }
+          .five-system-choose{
+            background: #1a499e;
+            color: #fff;
+          }
+        }
+        .five-system-img{
+          width: 1rem;
+          height: 20rem;
+          img{
+          width:94%;height:auto;
+          }
+        }
+        .five-system-details{
+          width: 70%;
+          font-size: 1.125rem;
+          margin-left: 1rem;
+          color: #686868;
+          div{
+            border-bottom: dashed 1px #d0d0d0;
+            margin-top: 1rem;
+            height: 2.05rem;
+          }
+        }
+        .fs-detail-hide{
+          display: none;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+/*专栏*/
+#projects{
+  margin: 3rem 0 3rem 0;
+  width: 75rem;
+  background: #fff;
+
+  .projects-content{
+    width: 31.5%;
+    height: 17rem;
+    position: relative;
+
+    .projects-opc{
+      width: 100%;
+      height: 3rem;
+      background-color: #000000;
+      opacity: 0.25;
+      position: absolute;
+      bottom: 0;
+    }
+    .projects-title{
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      bottom: 0.75rem;
+      font-size: 1.375rem; 
+      overflow:hidden; //超出的文本隐藏
+      text-overflow:ellipsis; //溢出用省略号显示
+      white-space:nowrap; //溢出不换行
+    }
+  }
+
+  .projects-content1{
+    background: url("专题1.png");
+    
+    background-size: 100% 100%; 
+  }
+  .projects-content2{
+    background: url("专题2.jpg");
+    background-size: 100% 100%; 
+  }
+  .projects-content3{
+    background: url("专题3.png");
+    background-size: 100% 100%; 
+  }
+}
+
+
+
+
+
+/*底部 /footer部分*/
+#index_footer{
+  width: 100%;
+  background: #282423;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.75rem;
+}
+
+/*回到顶部*/
+#full{
+  right: 10px; 
+  position: fixed; 
+  bottom: 100px; 
+  z-index: 100; 
+  cursor: pointer;
+  a{
+    text-decoration: none;
+    font-family: Microsoft YaHei;
+  }
+  a:hover{
+    
+  }
+}

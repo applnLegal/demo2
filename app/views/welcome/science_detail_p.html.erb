@@ -1,0 +1,44 @@
+<div class="science-modules-p">
+  
+</div>
+
+<div class="outer_div">
+  <div class="news-detail-p">
+
+    <div class="news-tag">
+      <div class="news-des">| 动态详情</div>
+      <div class="news-return"><%= link_to "首页",index_path%> > <%= link_to "科学传播", root_path(anchor: "science")%> > 动态详情</div>
+    </div>
+
+    <div class="news-detail-contain">
+      <div class="detail-title"><%= @science.title %></div>
+      <div class="detail-brand">
+        <div>发表时间：<%= @science.postdate %></div>
+        <div>来源：<%= @science.source %></div>
+        <div>作者：<%= @science.author %></div>
+      </div>
+    </div>
+
+    <div class="detail-content">
+      <%= raw @science.content %> 
+    </div>
+
+    <div class="detail-more">
+      <div class="detail-href">
+        <% if @science_pre != nil %>
+          <%= link_to science_detail_p_path(:no => @science_pre.no) do%>
+            <div class="text-left"><span>上一条 :</span><%= @science_pre.title%></div>
+          <% end -%>
+        <% end -%>
+      </div>
+      <div class="detail-href">
+        <% if @science_next != nil %>
+          <%= link_to science_detail_p_path(:no => @science_next.no) do%>
+            <div class="text-right"><span>下一条 :</span><%= @science_next.title%></div>
+          <% end -%>
+        <% end -%>
+      </div>
+    </div>
+
+  </div>
+</div>

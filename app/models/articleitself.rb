@@ -1,0 +1,2 @@
+class Articleitself < ApplicationRecord
+end

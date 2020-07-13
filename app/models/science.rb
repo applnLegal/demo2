@@ -1,0 +1,2 @@
+class Science < ApplicationRecord
+end

@@ -1,0 +1,18 @@
+current directory: /home/appln/projects/pro1/demo2.0/vendor/bundle/ruby/2.5.0/gems/sassc-2.3.0/ext
+/usr/local/rvm/rubies/ruby-2.5.0/bin/ruby -I /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0 -r ./siteconf20200420-7128-1y23ha6.rb extconf.rb
+/usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler/lockfile_parser.rb:108:in `warn_for_outdated_bundler_version': You must use Bundler 2 or greater with this lockfile. (Bundler::LockfileError)
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler/lockfile_parser.rb:95:in `initialize'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler/definition.rb:83:in `new'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler/definition.rb:83:in `initialize'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler/dsl.rb:234:in `new'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler/dsl.rb:234:in `to_definition'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler/dsl.rb:13:in `evaluate'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler/definition.rb:34:in `build'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler.rb:135:in `definition'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler.rb:101:in `setup'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/bundler/setup.rb:20:in `<top (required)>'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/rubygems/core_ext/kernel_require.rb:130:in `require'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/rubygems/core_ext/kernel_require.rb:130:in `rescue in require'
+	from /usr/local/rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0/rubygems/core_ext/kernel_require.rb:34:in `require'
+
+extconf failed, exit code 1

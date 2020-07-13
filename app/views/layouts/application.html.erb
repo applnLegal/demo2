@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>青藏科考国家动物种质资源共享平台</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body οnlοad="Timer()">
+
+    <%user_agent = request.user_agent%>
+    <%user_agent_parsed = UserAgent.parse(user_agent)%>
+    <%platform = user_agent_parsed.platform%>
+
+<!-- if(platform.scan(/AppleWebKit|Android|webOS|iPhone|iPod|BlackBerry|iPad|SymbianOS/).size > 0) -->
+
+    <% if(platform.scan(/Win|Mac|X11|Linux/).size > 0)%>
+      <%= render "common/header"%>
+      <%= yield %>
+      <%= render "common/footer"%> 
+    <%else%>
+      <%= render "common/header_p"%>
+      <%= yield %>
+      <%= render "common/footer_p"%> 
+    <%end%>
+
+  </body>
+</html>
+

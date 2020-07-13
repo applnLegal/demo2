@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  leadauthor: MyString
+  title: MyString
+  content: MyText
+  time: 2020-04-23 12:17:47
+  isopen: false
+  channel: MyString
+  reprintinterface: MyString
+
+two:
+  leadauthor: MyString
+  title: MyString
+  content: MyText
+  time: 2020-04-23 12:17:47
+  isopen: false
+  channel: MyString
+  reprintinterface: MyString

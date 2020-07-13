@@ -1,0 +1,125 @@
+
+
+#news_all_lists_p{
+  width: 90%;
+  margin: auto;
+  height: auto;
+  margin: 15px 0 5px 0;
+
+
+  .news-lists-nav{
+    
+    .news-tag{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      font-size: 1rem;
+      border-bottom: 1px solid #d0d0d0;
+      .news-des{
+        display:flex;
+        align-items: center;
+        color: #1a499e;
+        font-size: 1.125rem;
+      }
+      .news-return{
+        color: #787878;
+        font-size: 1.125rem;
+        a{
+          text-decoration: none; 
+          color: #787878;
+        }
+        a:hover{
+          color: #1a499e;
+          background: #fff;
+        }
+      }
+    }
+
+    .news-detail-contain{
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      width: 100%;
+      .news-detail-image{
+        
+        width: 104px;
+        height: 78px;
+        img{
+          margin: 0; padding: 0; width: 104px; height: 78px; object-fit: cover;
+        }
+      }
+      .news-detail-ct{
+        width: 210px;
+
+        .detail-tag{
+          display: flex;
+          justify-content: space-between;
+          .detail-title{
+            width: 90%;
+            overflow: hidden; //超出文本隐藏
+            text-overflow: ellipsis; //溢出省略号显示
+            padding: 5px 0 5px 0;
+            a{
+              width: 100%;
+              text-decoration: none;
+              font-size: 14px;
+              color: #333333;
+              overflow: hidden; 
+              text-overflow: ellipsis; 
+              white-space:nowrap; 
+            }
+            a:hover{
+              color: #1a499e;
+            }
+          }
+          
+          
+          
+        }
+        .detail-brand{
+          display:flex;
+          color: #686868;
+          div{
+            margin-right:0.5rem;
+          }
+        }
+        .detail-content{
+          font-size: 12px;
+          line-height: 18px;
+          color: #686868;
+          margin-bottom: 5px;
+          text-align: justify; //左右对齐
+          overflow:hidden; //超出文本隐藏
+          text-overflow:ellipsis; //溢出省略号显示
+          display:-webkit-box; //将对象作为弹性伸缩盒子
+          -webkit-box-orient:vertical; //设置伸缩盒子的子元素排列方式-从上到下垂直排列
+          -webkit-line-clamp:2; //这个属性不是css的规范属性，需要组合上面两个属性，数组代表显示的行数,如2,3,4....
+        }
+        .detail-check{
+          display: flex;
+          justify-content: space-between;
+          a{
+            font-size: 12px;
+            line-height: 1.625rem;
+            color: #999999;
+            text-decoration: none;
+          }
+          a:hover{
+            color: #1a499e;
+          }
+          .detail-time{
+            font-size: 12px;
+            line-height: 1.625rem;
+            color: #686868;
+          }
+        } 
+      }
+    }
+    .news-detail-contain:hover{
+      
+    }
+  }
+
+
+}

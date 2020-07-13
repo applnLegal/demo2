@@ -1,0 +1,61 @@
+<div class="news-modules">
+  
+</div>
+
+<%=@last_hash%>
+
+<div style="display:flex;justify-content: center;align-items: center;">
+  <div id="news_all_lists">
+    <div class="news-lists-nav">
+      <div class="news-tag">
+        <div class="news-des">
+          <div style="width:0.5rem;height:1.1rem;margin-top:1px;border-left:3px solid #1a499e;"></div>
+          <div>新闻中心</div>
+        </div>
+        <div class="news-return"><%= link_to "首页",index_path%> 
+        <i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.3rem;margin-left:0.4rem;"></i><i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.3rem;margin-right:0.3rem;"></i>
+          <%= link_to "新闻中心", root_path(anchor: "nesws")%> </div>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <% @news.try(:each) do |news| %>
+        <div class="news-detail-contain">
+          <div class="news-detail-image"><%=raw news.pic%></div>
+
+          <div class="news-detail-ct">
+            <div class="detail-tag">
+              <div class="detail-title hand" title="<%= news.title %>">
+                <%= link_to news_detail_path(:no => news.no), target: "_blank" do%>
+                <%= news.title %>
+                <%end%>
+              </div>
+              <div class="detail-time">
+                <%= news.postdate %>
+              </div>
+            </div>
+            <!-- <div class="detail-brand">
+              <div>发表时间：<%= news.postdate %></div>
+              <div>来源：<%= news.source %></div>
+              <div>作者：<%= news.author %></div>
+            </div> -->
+            <div class="detail-content">
+              <%=raw news.introduce%>
+            </div>
+            <div class="detail-check">
+              <%= link_to news_detail_path(:no => news.no), target: "_blank" do%>
+              查看详情&nbsp; 
+              <i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.2rem;"></i><i class="fa fa-angle-right" aria-hidden="true" style="font-size:1.2rem;"></i>
+              <%end%>
+            </div>
+          </div>
+        </div>
+        <% end %>        
+      </div>
+    </div>
+
+    <div style="text-align: center;margin: 5rem 0 3rem 0;">
+      <%= paginate @news,:prev_label => '上一页', :next_label => '下一页'  %>
+    </div>
+
+  </div>
+</div>

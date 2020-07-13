@@ -1,0 +1,52 @@
+/*常用全局class*/
+.common-grey-item{
+  background: linear-gradient(to bottom, #fff 37.5%, #dcdcdc 0);
+  margin-bottom: 1.25rem;
+  position: relative;
+
+  .common-grey-item-head{
+    width: 8.75rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-family: "思源黑体";
+    text-align: center;
+    line-height: 3rem;
+    color: #fff;
+    background: #1a499e;
+  }
+  .common-grey-item-more{
+    position:absolute;
+    bottom: 0;
+    right: 1.5rem;
+    line-height: 1.875rem;
+    font-size: 1.125rem;
+    a:hover{
+      color: #1a499e !important;
+      background: #dcdcdc !important;
+    }
+  }
+}
+
+
+.common-grey-item-p{
+  background: linear-gradient(to bottom, #fff 37.5%, #dcdcdc 0);
+  margin-bottom: 1.25rem;
+  position: relative;
+
+  .common-grey-item-head{
+    width: 8.75rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-family: "思源黑体";
+    text-align: center;
+    line-height: 3rem;
+    color: #fff;
+    background: #1a499e;
+  }
+}
+
+
+.hand{
+  cursor: pointer;
+}
+

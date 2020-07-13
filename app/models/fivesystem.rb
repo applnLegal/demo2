@@ -1,0 +1,2 @@
+class Fivesystem < ApplicationRecord
+end
